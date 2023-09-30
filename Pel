@@ -1,0 +1,33 @@
+shedule = {
+    '1001': ['пн', 'вс'],
+    '1231': ['пн', 'вт'],
+    '1232': ['ср', 'чт', 'пт'],
+    '1280': ['ср', 'пт', 'вс'],
+    '1282': ['чт'],
+    '1290': ['пт', 'вс'],
+    '1303': ['вт', 'вс'],
+}
+
+unique_days = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс']
+
+def wanish(sh, un):
+    abc = [t for p in sh.values() for t in p]
+    unit = dict()
+    for el in un:
+        n = 0
+        for ol in abc:
+            if el == ol:
+                n += 1
+                unit[el] = n
+        if n == 0:
+            unit[el] = 0   
+    return unit
+def data_set(unit):
+    for ik in unit.keys():
+        if unit[ik] == 0:
+            return ik
+
+adfas = wanish(shedule, unique_days)
+data_set(adfas), wanish(shedule, unique_days)
+
+
