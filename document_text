@@ -33,6 +33,55 @@ print(sorted(string_list, reverse=True))
 my_list = [(1, 'a') , (2, 'c'), (2, 'b')]
 print(sorted(my_list))
 print(sorted(my_list, reverse=True))
+
+
+ВЫВОД
+['the',
+ 'that',
+ 'of',
+ 'from',
+ 'a',
+ 'Food',
+ 'Courts',
+ 'your',
+ 'years',
+ 'world',
+ 'with',
+ 'will',
+ 'water',
+ 'taste',
+ 'so',
+ 'smells',
+ 'seats',
+ 'regular',
+ 'recent',
+ 'people',
+ 'part',
+ 'our',
+ 'mouth',
+ 'lot',
+ 'life',
+ 'in',
+ 'have',
+ 'foreign',
+ 'for',
+ 'foods',
+ 'every',
+ 'dishes',
+ 'delicious',
+ 'come',
+ 'cities',
+ 'caters',
+ 'become',
+ 'around',
+ 'aromatic',
+ 'are',
+ 'arc',
+ 'and',
+ 'all',
+ 'There',
+ 'The',
+ 'In']
   
 [(1, 'a'), (2, 'b'), (2, 'c')]
 [(2, 'c'), (2, 'b'), (1, 'a')]
