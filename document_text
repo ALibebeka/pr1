@@ -1,0 +1,38 @@
+document_text = 'There are the Food Courts in the cities that seats a lot of people and caters for every taste with dishes from all around the world. \
+ The aromatic smells that come from the Food Courts arc so delicious that your mouth will water. \
+ In recent years foreign foods have become a regular part of our life.'
+def word_frequency(txt):
+    off = txt.replace(',', '').replace('.', '').split()
+    text = 0
+    wire = sorted([word for word in off])
+    fire = sorted([off.count(word) for word in off], reverse=True)
+    words = {wire[i] : fire[i] for w, f in zip(wire, fire) for i in range(len(fire))}
+    return words
+#word_frequency(document_text)
+
+!!! Выведите все слова из word_frequency в порядке убывания частоты. Если частота одинаковая, выведите слова в порядке, обратном лексикографическому (то есть по убыванию).
+
+  
+Подсказка 1: используйте функцию sorted для списков. Она сортирует список по возрастанию, если вызвать sorted(my_list), и по убыванию, если вызвать sorted(my_list, reverse=True).
+
+my_list = [1, 10, 8, 9, 13]
+print(sorted(my_list))
+print(sorted(my_list, reverse=True))
+​
+string_list = ['ф', 'у', 'е']
+print(sorted(string_list))
+print(sorted(string_list, reverse=True))
+[1, 8, 9, 10, 13]
+[13, 10, 9, 8, 1]
+['е', 'у', 'ф']
+['ф', 'у', 'е']
+
+  
+Подсказка 2: если сортируемый список будет состоять из кортежей, то он будет отсортирован по элементам, которые стоят на первом месте. Если элементы на первом месте равны, то сортировка производится по вторым элементам.
+
+my_list = [(1, 'a') , (2, 'c'), (2, 'b')]
+print(sorted(my_list))
+print(sorted(my_list, reverse=True))
+  
+[(1, 'a'), (2, 'b'), (2, 'c')]
+[(2, 'c'), (2, 'b'), (1, 'a')]
